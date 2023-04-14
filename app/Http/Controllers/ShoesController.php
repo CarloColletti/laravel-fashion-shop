@@ -46,9 +46,9 @@ class ShoesController extends Controller
      * @param  \App\Models\Shoes  $shoes
      * @return \Illuminate\Http\Response
      */
-    public function show(Shoes $shoes)
+    public function show(Shoes $shoe)
     {
-        //
+        return view('shoes.show', compact('shoe'));
     }
 
     /**
