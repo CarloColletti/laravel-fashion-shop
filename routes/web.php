@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\ShoesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('shoes', ShoesController::class);
+
+
+// Route::get('/', [GuestHomeController::class, 'index'] );
