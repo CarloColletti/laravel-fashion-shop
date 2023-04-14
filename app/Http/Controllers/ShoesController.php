@@ -14,7 +14,9 @@ class ShoesController extends Controller
      */
     public function index()
     {
-        return view('shoes.index');
+        $shoes = Shoes::all();
+        // dd($shoes);
+        return view('shoes.index', compact('shoes'));
     }
 
     /**
