@@ -80,8 +80,9 @@ class ShoesController extends Controller
      * @param  \App\Models\Shoes  $shoes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Shoes $shoes)
+    public function destroy(Shoes $shoe)
     {
-        //
+        $shoe->delete();
+        return redirect ()-> route("shoes.index");
     }
 }

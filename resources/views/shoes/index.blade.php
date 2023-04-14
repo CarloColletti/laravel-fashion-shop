@@ -24,10 +24,17 @@
             <td>{{ $shoe->size }}</td>
             <td>{{ $shoe->price }} €</td>
             <td> 
+
               <a class="text-decoration-none mx-2" href="{{ route('shoes.show', $shoe )}}"> <i class="bi bi-eye"> </i> </a> 
               <a class="text-decoration-none" href=""> <i class="bi bi-pencil"> </i></i> </a>
-              <a class="text-decoration-none text-danger mx-2" href=""> <i class="bi bi-trash3"> </i> </a>
-            
+
+              <form action="{{ route('shoes.destroy', $shoe)}}" method="POST">
+                @csrf
+                @method('delete')
+
+                <button class="text-decoration-none text-danger mx-2" type="submit"> <i class="bi bi-trash3"> </i> </button>
+      
+              </form>
             
             </td>
           
