@@ -2,6 +2,14 @@
 
 @section('content')
 <div class="row">
+  <div class="col-12">
+    <div class="d-flex ms-auto">
+      <a href="{{ route('shoes.create') }}" class="btn btn-outline-success ms-auto" type="submit">Aggiungi Scarpa</a>
+    </div>
+  </div>
+
+</div>
+<div class="row">
   <table class="table">
     <thead>
         <tr>

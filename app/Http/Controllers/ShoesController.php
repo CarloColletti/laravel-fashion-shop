@@ -28,7 +28,7 @@ class ShoesController extends Controller
      */
     public function create()
     {
-        //
+        return view('shoes.create');
     }
 
     /**
@@ -39,7 +39,15 @@ class ShoesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $shoe = new Shoes;
+        $shoe->fill($data);
+        $shoe->img = 'https://picsum.photos/200/300';
+
+        $shoe->save();
+
+        return redirect ()->route('shoes.show', $shoe);
     }
 
     /**

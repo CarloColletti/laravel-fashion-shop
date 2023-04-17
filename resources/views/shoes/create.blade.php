@@ -2,10 +2,9 @@
 
 @section('content')
 
-  <form method="POST" action="{{ route('shoes.update', $shoe) }}">
+  <form method="POST" action="{{ route('shoes.store') }}">
     @csrf
-    @method('put')
-<br>
+    <br>
     <label for="name">Nome</label>
     <input type="text" name="name" id="name" value=""> <br><br>
 
@@ -25,7 +24,9 @@
       <option value="casual">Casual</option>
     </select> <br><br>
 
+    <label for="image">Immagine</label>
+    <input type="text" id="image" name="image" value="https://picsum.photos/200/300"> <br>
 
-    <button type="submit">Aggiungi</button>
+    <button type="submit">Modifica</button>
   </form>
 @endsection
