@@ -23,7 +23,7 @@
             <td>{{ $shoe->type }}</td>
             <td>{{ $shoe->size }}</td>
             <td>{{ $shoe->price }} €</td>
-            <td> 
+            <td class="d-flex">
 
               <a class="text-decoration-none mx-2" href="{{ route('shoes.show', $shoe )}}"> <i class="bi bi-eye"> </i> </a> 
               <a class="text-decoration-none" href=""> <i class="bi bi-pencil"> </i></i> </a>
