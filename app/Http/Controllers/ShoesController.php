@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Shoes;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class ShoesController extends Controller
 {
     /**
@@ -57,9 +59,9 @@ class ShoesController extends Controller
      * @param  \App\Models\Shoes  $shoes
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shoes $shoes)
+    public function edit(Shoes $shoe)
     {
-        //
+        return view('shoes.edit', compact('shoe'));
     }
 
     /**
@@ -69,9 +71,13 @@ class ShoesController extends Controller
      * @param  \App\Models\Shoes  $shoes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Shoes $shoes)
+    public function update(Request $request, Shoes $shoe)
     {
-        //
+        $data = $request->all();
+
+        $shoe->update($data);
+        
+        return redirect() ->route('shoes.show', $shoe);
     }
 
     /**

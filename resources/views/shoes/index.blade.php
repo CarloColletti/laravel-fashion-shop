@@ -26,7 +26,7 @@
             <td class="d-flex">
 
               <a class="text-decoration-none mx-2" href="{{ route('shoes.show', $shoe )}}"> <i class="bi bi-eye"> </i> </a> 
-              <a class="text-decoration-none" href=""> <i class="bi bi-pencil"> </i></i> </a>
+              <a class="text-decoration-none" href={{ route('shoes.edit', $shoe )}}> <i class="bi bi-pencil"> </i></i> </a>
 
               <form action="{{ route('shoes.destroy', $shoe)}}" method="POST">
                 @csrf
