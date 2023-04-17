@@ -21,6 +21,10 @@
         </style>
     </head>
     <body>
-        <a href="{{route('shoes.index')}}">vai a index</a>
+        <div class="container">
+            <h1>
+                <a href="{{route('shoes.index')}}">Go to the product</a>
+            </h1>
+        </div>
     </body>
 </html>
